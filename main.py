@@ -35,8 +35,8 @@ def check_titles(message):
 	paid_chapters = []
 
 	for element in info:
-		free_chapters.append(element[0])
-		paid_chapters.append(element[1])
+		free_chapters.append(element[1])
+		paid_chapters.append(element[0])
 
 	parser.write_columns(config['Worksheet']['OUTPUT_SHEET_NAME'],"C", paid_chapters)
 	parser.write_columns(config['Worksheet']['OUTPUT_SHEET_NAME'],"D", free_chapters)

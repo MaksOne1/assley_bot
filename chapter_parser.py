@@ -1,6 +1,7 @@
 import gspread
 import configparser
 import codecs
+import time
 
 SETTINGS_FILE = 'settings.ini'
 
@@ -22,3 +23,4 @@ class ChapterParser:
 
 		for (i, item) in enumerate(content):
 			ws.update_acell(column_name + str(i + 2), item)
+			time.sleep(1)
